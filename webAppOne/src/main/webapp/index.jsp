@@ -5,5 +5,5 @@
 <title>Ingenious Connect 2018-19</title>
 </head>
 <body>
-	Welcome to Prodapt Hackathon...<br>This is Web Application 1</body>
+	Welcome to Prodapt Hackathon...<br>This is Web application 1</body>
 </html>
