@@ -9,14 +9,14 @@ node {
    // Get the maven tool.
    // ** NOTE: This 'mvn' maven tool must be configured
    // **       in the global configuration.
-   def mvnHome = tool 'M3'
+   def mvnHome = tool 'MAVEN_HOME'
    
-   //stage('SonarQube analysis') {
-    //withSonarQubeEnv('sonar') {
-      // requires SonarQube Scanner for Maven 3.2+
-     // sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
-   // }
- // }
+   stage('SonarQube analysis') {
+   withSonarQubeEnv('sonar') {
+    requires SonarQube Scanner for Maven 3.2+
+    sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+    }
+  }
    stage 'clean'
    sh "${mvnHome}/bin/mvn clean"
    
